@@ -1,0 +1,80 @@
+comandos git:
+
+1)
+git clone git://github.com/JJ/tutorial.git
+
+donde esta el git propiamente dicho, el comando clone, y el git url, que contiene el "sitio" en el que está almacenado el archivo.
+
+2)
+git add ejemplo.1
+
+esta orden le dice a git que debe prestarle atención también a este fichero.
+
+3)
+git status
+
+dice algo asi:
+
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       new file:   ejemplo.1
+#
+
+4)
+git commit -m "Fichero ejemplo añadido"
+
+nos dirá algo asi:
+-bash-3.2$ git commit -m "Fichero ejemplo añadido"
+Created commit 3c3d643: Fichero ejemplo añadido
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+ create mode 100644 ejemplo.1
+
+5)
+git push git@github.com:JJ/tutorial.git
+
+6)
+git pull
+
+para subir los cambios.
+
+7)
+git help git
+
+8)
+> git config --global user.name “nuestro-nombre-de-usuario”
+> git config --global user.email “nuestro-email@nuestro-correo”
+
+Con esto estamos definiendo una opción de configuración que en general 
+se guarda en el fichero .gitconfig. En mi caso: C:\xampp\Git\etc\gitconfig.
+
+9)
+> git init
+
+iniciar reposiorio.
+
+10)
+> git diff
+controlar el contenido del index.
+
+11)
+ver los cambios introducidos en el último commit:
+> git show
+
+12)
+mostrar todos los commits realizados y poder así eliminar o recuperar:
+> git reflog
+
+13)
+> git reset --hard HEAD@{1}
+Este comando es peligroso ya que descarta los cambios que tuviéramos en el directorio 
+de trabajo sin hacer commit.
+
+14)
+Para crear una nueva rama en el repositorio:
+> git branch nueva
+
+15)
+Podemos ver las ramas que hay en el repositorio usando:
+> git branch
